@@ -1,2 +1,2 @@
 Bootstrap: docker
-From: netreconlab/clamscan:latest
+From: clamav/clamav:1.0_base
