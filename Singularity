@@ -1,2 +1,2 @@
 Bootstrap: docker
-From: clamav/clamav:1.0_base
+From: clamav/clamav:latest_base
