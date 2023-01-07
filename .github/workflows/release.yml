@@ -110,10 +110,10 @@ jobs:
       - name: Get branch name
         run: echo "BRANCH=${GITHUB_REF##*/}" >> $GITHUB_ENV
 
-      #- name: Update Singularity file tag
-      #  if: github.event_name != 'pull_request'
-      #  run: |
-      #    sed -i "s/latest/$BRANCH/" ./Singularity
+      - name: Update Singularity file tag
+        if: github.event_name != 'pull_request'
+        run: |
+          sed -i "s/latest/$BRANCH/" ./Singularity
 
       - name: Build Singularity image 
         if: ${{ env.keepgoing == 'true' }}
