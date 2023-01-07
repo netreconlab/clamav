@@ -55,7 +55,7 @@ jobs:
     needs: docker
     runs-on: ubuntu-latest
     container:
-      image: quay.io/singularity/singularity:v3.10.4-slim
+      image: quay.io/singularity/singularity:v3.10.4
     strategy:
       fail-fast: false
       matrix:
